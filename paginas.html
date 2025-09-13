@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECNO///SIV - Accesorios para Computadoras</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script>
+        // Función para mostrar u ocultar categorías
+        function mostrarCatalogo(categoria) {
+            document.querySelectorAll('.catalogo').forEach(cat => cat.style.display = 'none');
+            document.getElementById(categoria).style.display = 'block';
+        }
+
+        // Función para filtrar productos
+        function filtrarProductos() {
+            const query = document.querySelector('.search-bar input').value.toLowerCase();
+            const productos = document.querySelectorAll('.producto');
+            
+            productos.forEach(producto => {
+                const nombreProducto = producto.querySelector('p').textContent.toLowerCase();
+                if (nombreProducto.includes(query)) {
+                    producto.style.display = 'block';
+                } else {
+                    producto.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1 class="logo">TECNO///SIV</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#categorias">Categorías</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos..." onkeyup="filtrarProductos()">
+                <button>🔍</button>
+            </div>
+        </div>
+    </header>
+    
+    <section class="banner">
+        <div class="banner-content">
+            <h2>Encuentra los mejores accesorios para tu computadora</h2>
+            <p>Calidad garantizada y los mejores precios.</p>
+            <button class="shop-now">Comprar ahora</button>
+        </div>
+    </section>
+
+    <section id="categorias" class="categorias">
+        <h2>Explora Categorías Populares</h2>
+        <div class="categorias-grid">
+            <div class="categoria" onclick="mostrarCatalogo('teclados')"><img src="img/teclados.jpg" alt="Teclados"><p>Teclados</p></div>
+            <div class="categoria" onclick="mostrarCatalogo('mouse')"><img src="img/mouse.jpg" alt="Mouse"><p>Mouse</p></div>
+            <div class="categoria" onclick="mostrarCatalogo('audifonos')"><img src="img/audifonos.jpg" alt="Audífonos"><p>Audífonos</p></div>
+            <div class="categoria" onclick="mostrarCatalogo('impresoras')"><img src="img/impresoras.jpg" alt="Impresoras"><p>Impresoras</p></div>
+        </div>
+    </section>
+    
+    <section id="teclados" class="catalogo" style="display: none;">
+        <h2>Catálogo de Teclados</h2>
+        <div class="productos-grid">
+            <div class="producto"><img src="img/teclado1.PNG" alt="Teclado 6"><p>Teclado multimedia - BS.210</p></div>
+            <div class="producto"><img src="img/teclado2.PNG" alt="Teclado 6"><p>Teclado mecánico RGB - BS.350</p></div>
+            <div class="producto"><img src="img/teclado3.PNG" alt="Teclado 6"><p>Teclado inalámbrico - BS.200</p></div>
+            <div class="producto"><img src="img/teclado4.PNG" alt="Teclado 6"><p>Teclado ergonómico - BS.400</p></div>
+            <div class="producto"><img src="img/teclado5.PNG" alt="Teclado 6"><p>Teclado gamer mecánico - BS.500</p></div>
+            <div class="producto"><img src="img/teclado6.PNG" alt="Teclado 6"><p>Teclado retroiluminado - BS.250</p></div>
+            <div class="producto"><img src="img/teclado7.PNG" alt="Teclado 7"><p>Teclado compacto - BS.180</p></div>
+            <div class="producto"><img src="img/teclado8.PNG" alt="Teclado 8"><p>Teclado inalámbrico de oficina - BS.220</p></div>
+           </div>
+    </section>
+    
+    <section id="mouse" class="catalogo" style="display: none;">
+        <h2>Catálogo de Mouse</h2>
+        <div class="productos-grid">
+            <div class="producto"><img src="img/mouse1.PNG" alt="Mouse 6"><p>Mouse láser - BS.140</p></div>
+            <div class="producto"><img src="img/mouse2.PNG" alt="Mouse 6"><p>Mouse inalámbrico - BS.180</p></div>
+            <div class="producto"><img src="img/mouse3.PNG" alt="Mouse 6"><p>Mouse gaming - BS.220</p></div>
+            <div class="producto"><img src="img/mouse4.PNG" alt="Mouse 6"><p>Mouse ergonómico - BS.160</p></div>
+            <div class="producto"><img src="img/mouse5.PNG" alt="Mouse 6"><p>Mouse óptico - BS.130</p></div>
+            <div class="producto"><img src="img/mouse6.PNG" alt="Mouse 6"><p>Mouse Bluetooth - BS.200</p></div>
+            <div class="producto"><img src="img/mouse7.PNG" alt="Mouse 7"><p>Mouse de oficina - BS.100</p></div>
+            <div class="producto"><img src="img/mouse8.PNG" alt="Mouse 8"><p>Mouse gamer con luces RGB - BS.250</p></div>
+            </div>
+    </section>
+    
+    <section id="audifonos" class="catalogo" style="display: none;">
+        <h2>Catálogo de Audífonos</h2>
+        <div class="productos-grid">
+            <div class="producto"><img src="img/audifonos1.jpg" alt="Audífono 1"><p>Audífonos inalámbricos - BS.250</p></div>
+            <div class="producto"><img src="img/audifonos2.jpg" alt="Audífono 2"><p>Audífonos con cancelación de ruido - BS.300</p></div>
+            <div class="producto"><img src="img/audifonos3.jpg" alt="Audífono 3"><p>Audífonos gaming - BS.280</p></div>
+            <div class="producto"><img src="img/audifonos4.jpg" alt="Audífono 4"><p>Audífonos deportivos - BS.220</p></div>
+            <div class="producto"><img src="img/audifonos5.jpg" alt="Audífono 5"><p>Audífonos Bluetooth - BS.270</p></div>
+            <div class="producto"><img src="img/audifonos6.jpg" alt="Audífono 6"><p>Audífonos con micrófono - BS.260</p></div>
+            <div class="producto"><img src="img/audifonos7.jpg" alt="Audífono 7"><p>Audífonos de estudio - BS.350</p></div>
+            <div class="producto"><img src="img/audifonos8.jpg" alt="Audífono 8"><p>Audífonos con sonido envolvente - BS.400</p></div>
+            </div>
+    </section>
+    
+    <section id="impresoras" class="catalogo" style="display: none;">
+        <h2>Catálogo de Impresoras</h2>
+        <div class="productos-grid">
+            <div class="producto"><img src="img/impresora1.jpg" alt="Impresora 1"><p>Impresora láser - BS.1500</p></div>
+            <div class="producto"><img src="img/impresora2.jpg" alt="Impresora 2"><p>Impresora multifuncional - BS.1800</p></div>
+            <div class="producto"><img src="img/impresora3.jpg" alt="Impresora 3"><p>Impresora inyección de tinta - BS.1200</p></div>
+            <div class="producto"><img src="img/impresora4.jpg" alt="Impresora 4"><p>Impresora térmica - BS.900</p></div>
+            <div class="producto"><img src="img/impresora5.jpg" alt="Impresora 5"><p>Impresora inalámbrica - BS.1600</p></div>
+            <div class="producto"><img src="img/impresora6.jpg" alt="Impresora 6"><p>Impresora de etiquetas - BS.1100</p></div>
+            <div class="producto"><img src="img/impresora7.jpg" alt="Impresora 7"><p>Impresora para fotografía - BS.2500</p></div>
+            <div class="producto"><img src="img/impresora8.jpg" alt="Impresora 8"><p>Impresora 3D - BS.3000</p></div>
+            </div>
+    </section>
+    
+    <footer id="contacto">
+        <p>&copy; TECNO///SIV </p>
+        <p>Contacto: eddysaucedo154@gmail.com | Tel: 73152240</p>
+    </footer>
+</body>
+</html>
